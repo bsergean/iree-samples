@@ -10,14 +10,6 @@ if(NOT IREE_TARGET_BACKEND_LLVM_CPU OR
   return()
 endif()
 
-# vcpkg install stb
-#   tested with version 2021-09-10
-find_package(Stb)
-if(NOT Stb_FOUND)
-  message(STATUS "Could not find Stb, skipping vision inference sample")
-  return()
-endif()
-
 # Compile mnist.mlir to mnist.vmfb.
 set(_COMPILE_TOOL_EXECUTABLE $<TARGET_FILE:iree-compile>)
 set(_COMPILE_ARGS)
