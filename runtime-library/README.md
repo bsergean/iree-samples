@@ -44,7 +44,7 @@ C/library level, not the build system level.
 ```
 cmake -GNinja -Bbuild .
 cmake --build build
-./build/bin/ireert_test
+./build/bin/iree_test
 ```
 
 If we run the above commands on macOS, we will get
